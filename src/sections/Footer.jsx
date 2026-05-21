@@ -1,4 +1,4 @@
-import { FaGithub, FaFacebook, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaFacebook, FaLinkedin, FaFlickr } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
 
         <div>
           <h2 className="text-2xl font-bold text-white">
-            Arafat
+            Arafat Chowdhury
           </h2>
 
           <p className="text-gray-400 mt-2">
@@ -19,15 +19,15 @@ export default function Footer() {
         <div className="flex items-center gap-5 text-2xl text-gray-400">
 
           <a
-            href="https://github.com/arafat6t9"
+            href="https://www.flickr.com/photos/100247052@N07/"
             target="_blank"
             className="hover:text-cyan-400 transition"
           >
-            <FaGithub />
+            <FaFlickr />
           </a>
 
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/arafat.dip.eee/"
             target="_blank"
             className="hover:text-cyan-400 transition"
           >
@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/arafatdipee/"
             target="_blank"
             className="hover:text-cyan-400 transition"
           >
