@@ -12,6 +12,12 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="text-center z-10 px-4 animate-float"
       >
+        <img
+          src="/anime-logo.png"
+          alt="Arafat Logo"
+          className="w-36 h-36 mx-auto mb-6 rounded-full shadow-2xl border border-cyan-400/30"
+        />
+
         <h1 className="text-7xl md:text-[9rem] font-black tracking-tight bg-gradient-to-r from-white via-cyan-200 to-cyan-400 text-transparent bg-clip-text">
           Arafat Chowdhury
         </h1>
@@ -24,14 +30,22 @@ export default function Hero() {
           Building systems, capturing stories, and designing modern digital experiences.
         </p>
 
-        <div className="mt-10 flex  justify-center gap-4 flex-wrap">
-          <button className="bg-cyan-500 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:bg-cyan-400 transition px-6 py-3 rounded-full font-semibold text-black">
-            View Projects
-          </button>
+        <div className="flex gap-4 justify-center mt-8">
 
-          <button className="border border-white/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:border-cyan-400 transition px-6 py-3 rounded-full">
+          <a
+            href="#projects"
+            className="bg-cyan-500 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:bg-cyan-400 transition px-6 py-3 rounded-full font-semibold text-black hover:scale-105"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#contact"
+            className="border border-white/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:border-cyan-400 transition px-6 py-3 rounded-full text-white hover:bg-white/10"
+          >
             Contact Me
-          </button>
+          </a>
+
         </div>
       </motion.div>
     </section>
