@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import { FaBars, FaTimes } from "react-icons/fa"
+
 const links = [
   "About",
   "Skills",
@@ -11,6 +13,7 @@ const links = [
 export default function Navbar() {
 
   const [active, setActive] = useState("")
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
 
@@ -30,6 +33,7 @@ export default function Navbar() {
         }
 
       })
+
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -47,6 +51,8 @@ export default function Navbar() {
           Arafat
         </h1>
 
+        {/* Desktop Menu */}
+
         <ul className="hidden md:flex gap-8 text-gray-300">
 
           {links.map((link) => (
@@ -55,6 +61,51 @@ export default function Navbar() {
 
               <a
                 href={`#${link.toLowerCase()}`}
+                className={`transition hover:text-cyan-400 ${
+                  active === link.toLowerCase()
+                    ? "text-cyan-400"
+                    : ""
+                }`}
+              >
+                {link}
+              </a>
+
+            </li>
+
+          ))}
+
+        </ul>
+
+        {/* Mobile Button */}
+
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-white text-2xl"
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+      </div>
+
+      {/* Mobile Menu */}
+
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ${
+          menuOpen
+            ? "max-h-96 border-t border-white/10"
+            : "max-h-0"
+        }`}
+      >
+
+        <ul className="flex flex-col px-6 py-4 bg-black/40 backdrop-blur-md text-gray-300">
+
+          {links.map((link) => (
+
+            <li key={link} className="py-4 border-b border-white/5">
+
+              <a
+                href={`#${link.toLowerCase()}`}
+                onClick={() => setMenuOpen(false)}
                 className={`transition hover:text-cyan-400 ${
                   active === link.toLowerCase()
                     ? "text-cyan-400"

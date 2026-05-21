@@ -13,7 +13,7 @@ export default function Hero() {
         className="text-center z-10 px-4"
       >
         <h1 className="text-6xl md:text-8xl font-black tracking-tight">
-          Arafat
+          Arafat Chowdhury
         </h1>
 
         <p className="mt-6 text-cyan-400 text-xl md:text-3xl font-light">
