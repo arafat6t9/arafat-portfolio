@@ -167,3 +167,27 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(34, 211, 238, 0.7);
 }
+
+@keyframes floatLogo {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+.animate-floatLogo {
+  animation: floatLogo 8s ease-in-out infinite;
+}
+
+h2 {
+  line-height: 1.2;
+}

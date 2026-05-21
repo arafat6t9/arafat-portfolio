@@ -24,12 +24,12 @@ export default function Hero() {
           Building systems, capturing stories, and designing modern digital experiences.
         </p>
 
-        <div className="mt-10 flex justify-center gap-4 flex-wrap">
-          <button className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-full font-semibold text-black">
+        <div className="mt-10 flex  justify-center gap-4 flex-wrap">
+          <button className="bg-cyan-500 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:bg-cyan-400 transition px-6 py-3 rounded-full font-semibold text-black">
             View Projects
           </button>
 
-          <button className="border border-white/20 hover:border-cyan-400 transition px-6 py-3 rounded-full">
+          <button className="border border-white/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:border-cyan-400 transition px-6 py-3 rounded-full">
             Contact Me
           </button>
         </div>

@@ -14,6 +14,7 @@ import Photography from "./sections/Photography"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 import ScrollProgress from "./components/ScrollProgress"
+import FloatingLogos from "./components/FloatingLogos"
 
 
 function App() {
@@ -38,6 +39,8 @@ function App() {
       <ScrollProgress />
 
       <CursorGlow />
+
+      <FloatingLogos />
 
       <Navbar />
 

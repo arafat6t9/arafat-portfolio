@@ -10,7 +10,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white/5 border border-white/10 rounded-[40px] p-10 md:p-16 backdrop-blur-md text-center"
+          className="bg-white/5 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.08)] border border-white/10 rounded-[40px] p-10 md:p-16 backdrop-blur-md text-center"
         >
 
           <p className="text-cyan-400 uppercase tracking-widest mb-4">
