@@ -31,7 +31,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-32 px-6">
+    <section id="projects" className="py-32 px-6">
       <div className="max-w-7xl mx-auto">
 
         <motion.div

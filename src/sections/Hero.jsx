@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
       
       <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
 

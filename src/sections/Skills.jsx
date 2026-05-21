@@ -29,7 +29,7 @@ const skills = {
 
 export default function Skills() {
   return (
-    <section className="py-32 px-6">
+    <section id="skills" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
 
         <motion.div
