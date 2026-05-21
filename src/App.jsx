@@ -1,5 +1,7 @@
-import CursorGlow from "./components/CursorGlow"
+import { useEffect, useState } from "react"
 
+import CursorGlow from "./components/CursorGlow"
+import Loader from "./components/Loader"
 
 import Navbar from "./sections/Navbar"
 import Hero from "./sections/Hero"
@@ -11,10 +13,23 @@ import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 2500)
+
+    return () => clearTimeout(timer)
+
+  }, [])
+
   return (
     <>
 
-      
+      {loading && <Loader />}
 
       <CursorGlow />
 
