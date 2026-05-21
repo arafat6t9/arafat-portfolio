@@ -26,3 +26,8 @@ body::before {
 section {
   scroll-margin-top: 100px;
 }
+
+#root {
+  position: relative;
+  z-index: 1;
+}

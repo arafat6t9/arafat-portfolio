@@ -1,3 +1,5 @@
+import CursorGlow from "./components/CursorGlow"
+
 import Navbar from "./sections/Navbar"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
@@ -9,13 +11,23 @@ import Contact from "./sections/Contact"
 function App() {
   return (
     <>
+
+      <CursorGlow />
+
       <Navbar />
+
       <Hero />
+
       <About />
+
       <Skills />
+
       <Projects />
+
       <Photography />
+
       <Contact />
+
     </>
   )
 }
