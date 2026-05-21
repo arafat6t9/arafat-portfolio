@@ -1,4 +1,5 @@
 import CursorGlow from "./components/CursorGlow"
+import ParticlesBackground from "./components/ParticlesBackground"
 
 import Navbar from "./sections/Navbar"
 import Hero from "./sections/Hero"
@@ -11,6 +12,8 @@ import Contact from "./sections/Contact"
 function App() {
   return (
     <>
+
+      <ParticlesBackground />
 
       <CursorGlow />
 
