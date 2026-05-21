@@ -8,6 +8,7 @@ import Skills from "./sections/Skills"
 import Projects from "./sections/Projects"
 import Photography from "./sections/Photography"
 import Contact from "./sections/Contact"
+import Footer from "./sections/Footer"
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
       <Photography />
 
       <Contact />
+
+      <Footer />
 
     </>
   )

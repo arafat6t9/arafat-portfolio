@@ -29,22 +29,22 @@ export default function Contact() {
           <div className="flex flex-wrap justify-center gap-4">
 
             <a
-              href="mailto:arafat6t9@gmail.com"
+              href="mailto:arafat.dip.ee@gmail.com"
               className="bg-cyan-500 hover:bg-cyan-400 transition px-6 py-3 rounded-full text-black font-semibold"
             >
               Email Me
             </a>
 
             <a
-              href="https://github.com/arafat6t9"
+              href="https://www.flickr.com/photos/100247052@N07/"
               target="_blank"
               className="border border-white/20 hover:border-cyan-400 transition px-6 py-3 rounded-full"
             >
-              GitHub
+              Flickr
             </a>
 
             <a
-              href="https://facebook.com/"
+              href="https://www.facebook.com/arafat.dip.eee/"
               target="_blank"
               className="border border-white/20 hover:border-cyan-400 transition px-6 py-3 rounded-full"
             >
@@ -52,7 +52,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/arafatdipee/"
               target="_blank"
               className="border border-white/20 hover:border-cyan-400 transition px-6 py-3 rounded-full"
             >
