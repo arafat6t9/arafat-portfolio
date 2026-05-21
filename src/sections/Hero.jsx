@@ -10,9 +10,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center z-10 px-4"
+        className="text-center z-10 px-4 animate-float"
       >
-        <h1 className="text-6xl md:text-8xl font-black tracking-tight">
+        <h1 className="text-7xl md:text-[9rem] font-black tracking-tight bg-gradient-to-r from-white via-cyan-200 to-cyan-400 text-transparent bg-clip-text">
           Arafat Chowdhury
         </h1>
 

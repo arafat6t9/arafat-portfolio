@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
 html {
@@ -8,7 +9,7 @@ body {
   margin: 0;
   background: #050816;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
   overflow-x: hidden;
 }
 
@@ -64,4 +65,38 @@ body::after {
   100% {
     transform: translateY(0px) translateX(0px);
   }
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: white;
+}
+
+* {
+  transition-property:
+    color,
+    background-color,
+    border-color,
+    transform,
+    opacity;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
