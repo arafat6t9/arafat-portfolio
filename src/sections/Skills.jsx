@@ -9,6 +9,8 @@ import {
   FaGithub,
 } from "react-icons/fa"
 
+import { DiPhotoshop } from "react-icons/di";
+
 import {
   SiTailwindcss,
 } from "react-icons/si"
@@ -47,6 +49,11 @@ const skills = [
   {
     icon: <FaGithub />,
     name: "GitHub",
+  },
+
+  {
+    icon: <DiPhotoshop />,
+    name: "Photoshop",
   },
 
 ]

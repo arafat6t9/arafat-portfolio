@@ -4,10 +4,11 @@ import {
   FaWordpress,
   FaPhp,
   FaJs,
-  FaGithub,
+  FaGithub,  
 } from "react-icons/fa"
 
 import { SiTailwindcss } from "react-icons/si"
+import { DiPhotoshop } from "react-icons/di";
 
 const icons = [
   FaReact,
@@ -17,6 +18,7 @@ const icons = [
   FaJs,
   FaGithub,
   SiTailwindcss,
+  DiPhotoshop,
 ]
 
 export default function FloatingLogos() {

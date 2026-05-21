@@ -10,7 +10,7 @@ const projects = [
       "Corporate engineering company profile website with modern responsive UI.",
     image: project1,
     tech: ["WordPress", "Elementor", "CSS"],
-    live: "https://cel.tarunyohira.com/",
+    live: "https://controlware.com.bd/",
     github: "https://github.com/arafat6t9",
   },
 
