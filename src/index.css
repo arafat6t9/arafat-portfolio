@@ -100,3 +100,33 @@ body::after {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(34, 211, 238, 0.2),
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+button,
+a {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-2px);
+}

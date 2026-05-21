@@ -1,35 +1,18 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
 
-import photo1 from "../assets/photo1.jpg"
-import photo2 from "../assets/photo2.jpg"
-import photo3 from "../assets/photo3.jpg"
-import photo4 from "../assets/photo4.jpg"
-
-const photos = [
-  {
-    image: photo1,
-    category: "Street",
-  },
-
-  {
-    image: photo2,
-    category: "Wedding",
-  },
-
-  {
-    image: photo3,
-    category: "Fashion",
-  },
-
-  {
-    image: photo4,
-    category: "Travel",
-  },
-]
+import photos from "../data/photos"
 
 export default function Photography() {
+
+  const [selectedImage, setSelectedImage] = useState(null)
+
   return (
-    <section id="photography" className="py-32 px-6">
+    <section
+      id="photography"
+      className="py-32 px-6"
+    >
+
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -38,6 +21,7 @@ export default function Photography() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
+
           <p className="text-cyan-400 uppercase tracking-widest mb-4">
             Photography
           </p>
@@ -49,10 +33,12 @@ export default function Photography() {
           <div className="grid md:grid-cols-2 gap-8">
 
             {photos.map((photo, index) => (
+
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.02 }}
-                className="relative overflow-hidden rounded-3xl group"
+                onClick={() => setSelectedImage(photo.image)}
+                className="relative overflow-hidden rounded-3xl group cursor-pointer"
               >
 
                 <img
@@ -64,18 +50,42 @@ export default function Photography() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
                 <div className="absolute bottom-8 left-8">
+
                   <p className="text-cyan-400 uppercase tracking-widest text-sm">
                     {photo.category}
                   </p>
+
                 </div>
 
               </motion.div>
+
             ))}
 
           </div>
+
         </motion.div>
 
       </div>
+
+      {/* LIGHTBOX */}
+
+      {selectedImage && (
+
+        <div
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-[9999] p-6"
+        >
+
+          <img
+            src={selectedImage}
+            alt=""
+            className="max-w-full max-h-full rounded-2xl"
+          />
+
+        </div>
+
+      )}
+
     </section>
   )
 }

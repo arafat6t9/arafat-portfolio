@@ -18,7 +18,7 @@ export default function Loader() {
           transition={{ duration: 1 }}
           className="text-6xl md:text-8xl font-black bg-gradient-to-r from-white via-cyan-200 to-cyan-400 text-transparent bg-clip-text"
         >
-          Arafat
+          Arafat Chowdhury
         </motion.h1>
 
         <motion.div

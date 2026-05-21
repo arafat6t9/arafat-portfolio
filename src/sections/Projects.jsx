@@ -1,37 +1,15 @@
 import { motion } from "framer-motion"
 
-const projects = [
-  {
-    title: "Controlware Engineering",
-    description:
-      "Corporate company profile website with modern responsive design and project showcase.",
-    tech: ["WordPress", "Elementor", "CSS"],
-    live: "#",
-    github: "#",
-  },
-
-  {
-    title: "Invoice Automation System",
-    description:
-      "Excel + VBA based automated billing and project management solution.",
-    tech: ["Excel VBA", "Automation", "Reporting"],
-    live: "#",
-    github: "#",
-  },
-
-  {
-    title: "Photography Portfolio",
-    description:
-      "Creative gallery system for showcasing street, wedding, and fashion photography.",
-    tech: ["React", "Tailwind", "Gallery"],
-    live: "#",
-    github: "#",
-  },
-]
+import projects from "../data/projects"
 
 export default function Projects() {
+
   return (
-    <section id="projects" className="py-32 px-6">
+    <section
+      id="projects"
+      className="py-32 px-6"
+    >
+
       <div className="max-w-7xl mx-auto">
 
         <motion.div
@@ -40,6 +18,7 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
+
           <p className="text-cyan-400 uppercase tracking-widest mb-4">
             Projects
           </p>
@@ -51,13 +30,42 @@ export default function Projects() {
           <div className="grid md:grid-cols-3 gap-8">
 
             {projects.map((project, index) => (
+
               <motion.div
                 key={index}
                 whileHover={{ y: -10 }}
-                className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-md hover:border-cyan-400/40 transition duration-300"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md"
               >
 
-                <div className="h-52 bg-gradient-to-br from-cyan-500/20 to-blue-500/20"></div>
+                <div className="relative overflow-hidden">
+
+                  <img
+                    src={project.image}
+                    alt=""
+                    className="w-full h-[260px] object-cover transition duration-700 group-hover:scale-110"
+                  />
+
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center gap-4">
+
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      className="bg-cyan-400 text-black px-5 py-2 rounded-full font-semibold"
+                    >
+                      Live Preview
+                    </a>
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="border border-white/20 px-5 py-2 rounded-full"
+                    >
+                      GitHub
+                    </a>
+
+                  </div>
+
+                </div>
 
                 <div className="p-8">
 
@@ -70,20 +78,25 @@ export default function Projects() {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-8">
+
                     {project.tech.map((item) => (
+
                       <span
                         key={item}
                         className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-sm"
                       >
                         {item}
                       </span>
+
                     ))}
+
                   </div>
 
                   <div className="flex gap-4">
 
                     <a
                       href={project.live}
+                      target="_blank"
                       className="bg-cyan-500 hover:bg-cyan-400 transition px-5 py-2 rounded-full text-black font-semibold"
                     >
                       Live
@@ -91,6 +104,7 @@ export default function Projects() {
 
                     <a
                       href={project.github}
+                      target="_blank"
                       className="border border-white/20 hover:border-cyan-400 transition px-5 py-2 rounded-full"
                     >
                       GitHub
@@ -99,13 +113,17 @@ export default function Projects() {
                   </div>
 
                 </div>
+
               </motion.div>
+
             ))}
 
           </div>
+
         </motion.div>
 
       </div>
+
     </section>
   )
 }
