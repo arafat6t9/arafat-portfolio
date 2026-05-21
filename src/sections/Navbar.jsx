@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa"
 
 const links = [
   "About",
+  "Timeline",
   "Skills",
   "Projects",
   "Photography",
@@ -14,10 +15,19 @@ export default function Navbar() {
 
   const [active, setActive] = useState("")
   const [menuOpen, setMenuOpen] = useState(false)
+  const [visible, setVisible] = useState(true)
 
   useEffect(() => {
 
+    let lastScroll = 0
+
     const handleScroll = () => {
+
+      const currentScroll = window.scrollY
+
+      setVisible(currentScroll < lastScroll || currentScroll < 50)
+
+      lastScroll = currentScroll
 
       const sections = document.querySelectorAll("section")
 
@@ -38,20 +48,25 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () =>
+      window.removeEventListener("scroll", handleScroll)
 
   }, [])
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10 transition-transform duration-500 ${
+        visible
+          ? "translate-y-0"
+          : "-translate-y-full"
+      }`}
+    >
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         <h1 className="text-white text-2xl font-bold">
           Arafat Chowdhury
         </h1>
-
-        {/* Desktop Menu */}
 
         <ul className="hidden md:flex gap-8 text-gray-300">
 
@@ -61,13 +76,18 @@ export default function Navbar() {
 
               <a
                 href={`#${link.toLowerCase()}`}
-                className={`transition hover:text-cyan-400 ${
+                className={`transition relative hover:text-cyan-400 ${
                   active === link.toLowerCase()
                     ? "text-cyan-400"
                     : ""
                 }`}
               >
                 {link}
+
+                {active === link.toLowerCase() && (
+                  <span className="absolute left-0 -bottom-2 w-full h-[2px] bg-cyan-400 rounded-full"></span>
+                )}
+
               </a>
 
             </li>
@@ -75,8 +95,6 @@ export default function Navbar() {
           ))}
 
         </ul>
-
-        {/* Mobile Button */}
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -86,8 +104,6 @@ export default function Navbar() {
         </button>
 
       </div>
-
-      {/* Mobile Menu */}
 
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${

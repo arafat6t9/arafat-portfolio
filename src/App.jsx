@@ -6,12 +6,15 @@ import Loader from "./components/Loader"
 import Navbar from "./sections/Navbar"
 import Hero from "./sections/Hero"
 import About from "./sections/About"
+import Timeline from "./sections/Timeline"
 import Stats from "./sections/Stats"
 import Skills from "./sections/Skills"
 import Projects from "./sections/Projects"
 import Photography from "./sections/Photography"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
+import ScrollProgress from "./components/ScrollProgress"
+
 
 function App() {
 
@@ -32,6 +35,8 @@ function App() {
 
       {loading && <Loader />}
 
+      <ScrollProgress />
+
       <CursorGlow />
 
       <Navbar />
@@ -39,6 +44,8 @@ function App() {
       <Hero />
 
       <About />
+
+      <Timeline />
 
       <Stats />
 
