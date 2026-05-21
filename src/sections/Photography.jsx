@@ -30,7 +30,7 @@ export default function Photography() {
             Capturing Stories Through Lens
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {photos.map((photo, index) => (
 
@@ -44,7 +44,7 @@ export default function Photography() {
                 <img
                   src={photo.image}
                   alt=""
-                  className="w-full h-[500px] object-cover transition duration-700 group-hover:scale-110"
+                  className="w-full h-[420px] object-cover transition duration-700 group-hover:scale-110 hover:brightness-110"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>

@@ -15,6 +15,7 @@ import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
 import ScrollProgress from "./components/ScrollProgress"
 import FloatingLogos from "./components/FloatingLogos"
+import MouseTrail from "./components/MouseTrail"
 
 
 function App() {
@@ -39,6 +40,8 @@ function App() {
       <ScrollProgress />
 
       <CursorGlow />
+
+      <MouseTrail />
 
       <FloatingLogos />
 

@@ -191,3 +191,21 @@ a:hover {
 h2 {
   line-height: 1.2;
 }
+
+section {
+  animation: fadeSection 1s ease;
+}
+
+@keyframes fadeSection {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}

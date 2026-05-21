@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
       
-      <div className="absolute w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.12),transparent_60%)]"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
