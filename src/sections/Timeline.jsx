@@ -3,24 +3,45 @@ import { motion } from "framer-motion"
 const timeline = [
 
   {
-    year: "2014 - 2017",
-    title: "Professional Photographer",
+    year: "2014 - Feb 2017",
+    title: "Full-Time Professional Photographer",
     description:
-      "Worked in wedding, fashion, and street photography while developing creative storytelling skills.",
+      "Worked professionally in wedding, fashion, and street photography, building strong creative storytelling, visual direction, and client management experience. Photography continues today as a part-time passion and creative pursuit.",
   },
 
   {
-    year: "2018 - Present",
-    title: "Electrical Engineer",
+    year: "Mar 2017 - Nov 2021",
+    title: "Assistant Engineer — BECC",
     description:
-      "Working on substation projects, tendering, project coordination, and engineering management.",
+      "Started engineering career at BECC as an Assistant Engineer, working on electrical engineering projects, technical coordination, and field/site operations.",
   },
 
   {
-    year: "2020 - Present",
-    title: "Web Developer & Designer",
+    year: "Dec 2021",
+    title: "Joined Controlware Engineering Ltd",
     description:
-      "Building modern websites, automation systems, branding materials, and creative digital experiences.",
+      "Joined Controlware Engineering Ltd as Assistant Engineer (Project & Site Management), working on project execution, coordination, technical management, and engineering operations.",
+  },
+
+  {
+    year: "Jan 2024",
+    title: "Assistant Engineer (Project)",
+    description:
+      "Promoted within Controlware Engineering Ltd, focusing more deeply on project coordination, management, execution strategy, and engineering operations.",
+  },
+
+  {
+    year: "Jan 2025 - Present",
+    title: "Senior Engineer (Tender Sales)",
+    description:
+      "Currently working as Senior Engineer (Tender Sales), managing tendering, business development, project coordination, client communication, technical proposals, and engineering project strategy.",
+  },
+
+  {
+    year: "Development Journey",
+    title: "Developer & Creative Technologist",
+    description:
+      "Continuously building websites, automation systems, ERP tools, branding materials, and modern digital experiences alongside engineering and creative work.",
   },
 
 ]
@@ -47,33 +68,44 @@ export default function Timeline() {
           </p>
 
           <h2 className="text-5xl font-bold mb-20">
-            Experience Timeline
+            Professional Timeline
           </h2>
 
           <div className="relative border-l border-cyan-400/30 pl-10 space-y-16">
 
             {timeline.map((item, index) => (
 
-              <div
+              <motion.div
                 key={index}
-                className="relative"
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                viewport={{ once: true }}
+                className="relative group"
               >
 
-                <div className="absolute -left-[49px] top-2 w-5 h-5 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)]"></div>
+                <div className="absolute -left-[49px] top-2 w-5 h-5 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.8)] group-hover:scale-125 transition"></div>
 
-                <p className="text-cyan-400 text-sm tracking-widest mb-2">
-                  {item.year}
-                </p>
+                <div className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:border-cyan-400/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.08)] transition">
 
-                <h3 className="text-3xl font-bold mb-4">
-                  {item.title}
-                </h3>
+                  <p className="text-cyan-400 text-sm tracking-widest mb-3">
+                    {item.year}
+                  </p>
 
-                <p className="text-gray-400 leading-relaxed">
-                  {item.description}
-                </p>
+                  <h3 className="text-3xl font-bold mb-5">
+                    {item.title}
+                  </h3>
 
-              </div>
+                  <p className="text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
+
+                </div>
+
+              </motion.div>
 
             ))}
 
