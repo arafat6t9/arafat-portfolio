@@ -4,50 +4,110 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
       
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,211,238,0.12),transparent_60%)]"></div>
+      <div className="text-center z-10 px-6">
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="text-cyan-400 uppercase tracking-[0.3em] mb-6"
+      >
+        Engineer • Creative Technologist • Photographer
+      </motion.p>
+
+      <motion.h1
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="text-6xl md:text-8xl font-black leading-none mb-8"
+      >
+        <span className="text-white">
+          Arafat
+        </span>
+
+        <br />
+
+        <span className="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent">
+          Chowdhury
+        </span>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6 }}
+        className="max-w-3xl mx-auto text-gray-400 text-lg md:text-2xl leading-relaxed mb-12"
+      >
+        Building engineering systems, automation tools,
+        modern digital experiences, and cinematic visual stories
+        through technology and creativity.
+      </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-center z-10 px-4 animate-float"
+        transition={{ delay: 0.8 }}
+        className="flex flex-wrap justify-center gap-5"
       >
-        <img
-          src="/anime-logo.png"
-          alt="Arafat Logo"
-          className="w-36 h-36 mx-auto mb-6 rounded-full shadow-2xl border border-cyan-400/30"
-        />
 
-        <h1 className="text-7xl md:text-[9rem] font-black tracking-tight bg-gradient-to-r from-white via-cyan-200 to-cyan-400 text-transparent bg-clip-text">
-          Arafat Chowdhury
-        </h1>
+        <a
+          href="#projects"
+          className="px-8 py-4 rounded-full bg-cyan-500 text-black font-semibold hover:scale-105 hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition"
+        >
+          View Projects
+        </a>
 
-        <p className="mt-6 text-cyan-400 text-xl md:text-3xl font-light">
-          Engineer • Photographer • Developer
-        </p>
+        <a
+          href="#contact"
+          className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white/10 hover:border-cyan-400 transition"
+        >
+          Contact Me
+        </a>
 
-        <p className="mt-6 max-w-2xl mx-auto text-gray-400 text-lg leading-relaxed">
-          Building systems, capturing stories, and designing modern digital experiences.
-        </p>
+        <a
+          href="/Arafat-Chowdhury-CV.pdf"
+          target="_blank"
+          className="px-8 py-4 rounded-full border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 transition"
+        >
+          Download CV
+        </a>
 
-        <div className="flex gap-4 justify-center mt-8">
-
-          <a
-            href="#projects"
-            className="bg-cyan-500 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:bg-cyan-400 transition px-6 py-3 rounded-full font-semibold text-black hover:scale-105"
-          >
-            View Projects
-          </a>
-
-          <a
-            href="#contact"
-            className="border border-white/20 hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] hover:border-cyan-400 transition px-6 py-3 rounded-full text-white hover:bg-white/10"
-          >
-            Contact Me
-          </a>
-
-        </div>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="flex justify-center gap-6 mt-12 text-gray-400"
+      >
+
+        <a
+          href="https://www.linkedin.com/in/arafatdipee"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/arafat6t9"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.flickr.com/photos/100247052@N07/"
+          target="_blank"
+          className="hover:text-cyan-400 transition"
+        >
+          Flickr
+        </a>
+
+      </motion.div>
+
+    </div>
     </section>
   )
 }

@@ -24,10 +24,10 @@ export default function Projects() {
           </p>
 
           <h2 className="text-5xl font-bold mb-16">
-            Featured Work
+            Selected Projects & Works
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
 
             {projects.map((project, index) => (
 

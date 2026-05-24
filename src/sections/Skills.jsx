@@ -1,59 +1,45 @@
 import { motion } from "framer-motion"
 
-import {
-  FaReact,
-  FaLaravel,
-  FaWordpress,
-  FaPhp,
-  FaJs,
-  FaGithub,
-} from "react-icons/fa"
+const skillGroups = [
 
-import { DiPhotoshop } from "react-icons/di";
-
-import {
-  SiTailwindcss,
-} from "react-icons/si"
-
-const skills = [
   {
-    icon: <FaReact />,
-    name: "React",
+    title: "Engineering",
+    skills: [
+      "Substation Projects",
+      "Tender Management",
+      "Project Coordination",
+      "Technical Documentation",
+      "Solar Systems",
+      "Business Development",
+    ],
   },
 
   {
-    icon: <FaLaravel />,
-    name: "Laravel",
+    title: "Development",
+    skills: [
+      "React",
+      "Laravel",
+      "WordPress",
+      "PHP",
+      "JavaScript",
+      "Tailwind CSS",
+      "GitHub",
+      "ERP Systems",
+      "VBA Automation",
+    ],
   },
 
   {
-    icon: <FaWordpress />,
-    name: "WordPress",
-  },
-
-  {
-    icon: <FaPhp />,
-    name: "PHP",
-  },
-
-  {
-    icon: <FaJs />,
-    name: "JavaScript",
-  },
-
-  {
-    icon: <SiTailwindcss />,
-    name: "Tailwind",
-  },
-
-  {
-    icon: <FaGithub />,
-    name: "GitHub",
-  },
-
-  {
-    icon: <DiPhotoshop />,
-    name: "Photoshop",
+    title: "Creative",
+    skills: [
+      "Photography",
+      "Photoshop",
+      "Lightroom",
+      "Premiere Pro",
+      "After Effects",
+      "Branding",
+      "UI/UX Design",
+    ],
   },
 
 ]
@@ -83,26 +69,36 @@ export default function Skills() {
             Technologies & Creative Tools
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
 
-            {skills.map((skill, index) => (
+            {skillGroups.map((group, index) => (
 
               <motion.div
                 key={index}
                 whileHover={{
                   y: -10,
-                  scale: 1.05,
                 }}
-                className="floating-card bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:border-cyan-400/40 transition"
+                className="bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 hover:border-cyan-400/30 transition"
               >
 
-                <div className="text-6xl text-cyan-400 mb-6">
-                  {skill.icon}
-                </div>
-
-                <h3 className="text-lg font-semibold">
-                  {skill.name}
+                <h3 className="text-3xl font-bold text-cyan-400 mb-8">
+                  {group.title}
                 </h3>
+
+                <div className="flex flex-wrap gap-3">
+
+                  {group.skills.map((skill, idx) => (
+
+                    <span
+                      key={idx}
+                      className="px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-300 text-sm hover:bg-cyan-400/20 transition"
+                    >
+                      {skill}
+                    </span>
+
+                  ))}
+
+                </div>
 
               </motion.div>
 

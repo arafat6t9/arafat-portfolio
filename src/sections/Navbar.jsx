@@ -64,11 +64,16 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <h1 className="text-white text-2xl font-bold">
+        <a
+          href="#home"
+          className="text-white text-2xl font-bold hover:text-cyan-400 transition"
+        >
           Arafat Chowdhury
-        </h1>
+        </a>
 
-        <ul className="hidden md:flex gap-8 text-gray-300">
+        <div className="hidden md:flex items-center gap-8">
+
+          <ul className="flex gap-8 text-gray-300">
 
           {links.map((link) => (
 
@@ -95,6 +100,16 @@ export default function Navbar() {
           ))}
 
         </ul>
+
+        <a
+          href="/Arafat-Chowdhury-CV.pdf"
+          target="_blank"
+          className="px-5 py-2 rounded-full border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 transition"
+        >
+          Download CV
+        </a>
+
+        </div>
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}

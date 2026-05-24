@@ -1,4 +1,4 @@
-import { FaGithub, FaFacebook, FaLinkedin, FaFlickr } from "react-icons/fa"
+import { FaFacebook, FaLinkedin, FaFlickr } from "react-icons/fa"
 
 export default function Footer() {
   return (
@@ -11,8 +11,14 @@ export default function Footer() {
             Arafat Chowdhury
           </h2>
 
+          <p className="text-gray-500 mt-4 max-w-md leading-relaxed">
+            Building engineering systems, automation tools,
+            modern web experiences, and cinematic visual stories
+            through technology and creativity.
+          </p>
+
           <p className="text-gray-400 mt-2">
-            Engineer • Photographer • Developer
+            Engineer • Creative Technologist • Photographer
           </p>
         </div>
 
@@ -21,7 +27,7 @@ export default function Footer() {
           <a
             href="https://www.flickr.com/photos/100247052@N07/"
             target="_blank"
-            className="hover:text-cyan-400 transition"
+            className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-cyan-400/40 hover:text-cyan-400 hover:bg-cyan-400/10 transition"
           >
             <FaFlickr />
           </a>
@@ -29,7 +35,7 @@ export default function Footer() {
           <a
             href="https://www.facebook.com/arafat.dip.eee/"
             target="_blank"
-            className="hover:text-cyan-400 transition"
+            className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-cyan-400/40 hover:text-cyan-400 hover:bg-cyan-400/10 transition"
           >
             <FaFacebook />
           </a>
@@ -37,7 +43,7 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/arafatdipee/"
             target="_blank"
-            className="hover:text-cyan-400 transition"
+            className="w-12 h-12 rounded-full border border-white/10 bg-white/5 flex items-center justify-center hover:border-cyan-400/40 hover:text-cyan-400 hover:bg-cyan-400/10 transition"
           >
             <FaLinkedin />
           </a>
@@ -46,8 +52,16 @@ export default function Footer() {
 
       </div>
 
+      <div className="text-center text-gray-500 text-sm mt-12 space-y-2">
+
+        <p>
+          Based in Bangladesh • Available for freelance & collaborations
+        </p>
+
+      </div>
+      
       <div className="text-center text-gray-500 text-sm mt-10">
-        © 2026 Arafat. All rights reserved.
+        © 2026 Arafat Chowdhury • Designed & Developed by Arafat
       </div>
 
     </footer>

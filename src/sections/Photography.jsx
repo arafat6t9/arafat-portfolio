@@ -22,13 +22,22 @@ export default function Photography() {
           viewport={{ once: true }}
         >
 
-          <p className="text-cyan-400 uppercase tracking-widest mb-4">
-            Photography
-          </p>
+          <div className="text-center mb-16">
 
-          <h2 className="text-5xl font-bold mb-16">
-            Capturing Stories Through Lens
-          </h2>
+            <p className="text-cyan-400 uppercase tracking-[0.3em] mb-4">
+              Photography
+            </p>
+
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              Visual Stories
+            </h2>
+
+            <p className="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed">
+              Capturing cinematic moments, emotions, street life,
+              portraits, and timeless visual stories through photography.
+            </p>
+
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -38,22 +47,26 @@ export default function Photography() {
                 key={index}
                 whileHover={{ scale: 1.02 }}
                 onClick={() => setSelectedImage(photo.image)}
-                className="relative overflow-hidden rounded-3xl group cursor-pointer"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm cursor-pointer"
               >
 
                 <img
                   src={photo.image}
-                  alt=""
+                  alt={photo.category}
                   className="w-full h-[420px] object-cover transition duration-700 group-hover:scale-110 hover:brightness-110"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 group-hover:opacity-90 transition duration-500"></div>
 
-                <div className="absolute bottom-8 left-8">
+                <div className="absolute bottom-0 left-0 p-6 z-10">
 
-                  <p className="text-cyan-400 uppercase tracking-widest text-sm">
+                  <p className="text-cyan-400 text-sm uppercase tracking-[0.2em] mb-2">
                     {photo.category}
                   </p>
+
+                  <h3 className="text-white text-2xl font-bold">
+                    Visual Story
+                  </h3>
 
                 </div>
 
@@ -78,7 +91,7 @@ export default function Photography() {
 
           <img
             src={selectedImage}
-            alt=""
+            alt={photo.category}
             className="max-w-full max-h-full rounded-2xl"
           />
 
