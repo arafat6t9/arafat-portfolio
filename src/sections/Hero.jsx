@@ -9,9 +9,9 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         src="/anime-logo.png"
         alt="Arafat Logo"
-        className="w-36 h-36 md:w-44 md:h-44 mx-auto mb-8 rounded-full shadow-[0_0_60px_rgba(34,211,238,0.25)] border border-cyan-400/30 object-cover"
+        className="w-40 h-40 md:w-52 md:h-52 mx-auto mb-10 rounded-full shadow-[0_0_60px_rgba(34,211,238,0.25)] border border-cyan-400/30 object-cover"
       />
-      <div className="text-center z-10 px-6">
+      <div className="text-center z-10 px-6 max-w-5xl mx-auto">
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
