@@ -3,7 +3,14 @@ import { motion } from "framer-motion"
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
-      
+      <motion.img
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        src="/anime-logo.png"
+        alt="Arafat Logo"
+        className="w-36 h-36 md:w-44 md:h-44 mx-auto mb-8 rounded-full shadow-[0_0_60px_rgba(34,211,238,0.25)] border border-cyan-400/30 object-cover"
+      />
       <div className="text-center z-10 px-6">
 
       <motion.p
