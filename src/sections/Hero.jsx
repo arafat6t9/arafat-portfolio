@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen bg-[#050816] text-white flex items-center justify-center relative overflow-hidden">
 
-      <div className="text-center z-10 px-6 max-w-5xl mx-auto">
+      <div className="text-center z-10 px-6 max-w-5xl mx-auto pt-24 md:pt-32">
       <motion.img
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -26,17 +26,17 @@ export default function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="text-6xl md:text-8xl font-black leading-none mb-8"
+        className="text-5xl md:text-7xl lg:text-8xl font-black leading-tight mb-8"
       >
+      
         <span className="text-white">
-          Arafat
+          Arafat{" "}
         </span>
-
-        <br />
-
+      
         <span className="bg-gradient-to-r from-cyan-300 to-cyan-500 bg-clip-text text-transparent">
           Chowdhury
         </span>
+      
       </motion.h1>
 
       <motion.p
