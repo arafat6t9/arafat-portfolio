@@ -1,0 +1,16 @@
+import { useEffect,useState } from "react"
+import CursorGlow from "./components/CursorGlow"
+import Loader from "./components/Loader"
+import ScrollProgress from "./components/ScrollProgress"
+import Navbar from "./sections/Navbar"
+import Hero from "./sections/Hero"
+import About from "./sections/About"
+import Timeline from "./sections/Timeline"
+import Stats from "./sections/Stats"
+import Skills from "./sections/Skills"
+import Projects from "./sections/Projects"
+import Photography from "./sections/Photography"
+import Contact from "./sections/Contact"
+import Footer from "./sections/Footer"
+function App(){const [loading,setLoading]=useState(true);useEffect(()=>{const t=setTimeout(()=>setLoading(false),900);return()=>clearTimeout(t)},[]);return <>{loading&&<Loader/>}<ScrollProgress/><CursorGlow/><Navbar/><Hero/><About/><Timeline/><Stats/><Skills/><Projects/><Photography/><Contact/><Footer/></>}
+export default App
