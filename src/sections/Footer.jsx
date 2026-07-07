@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="px-6 py-10"><div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-between text-sm text-gray-600"><p>© 2026 Arafat Chowdhury. Engineer · Builder · Photographer.</p><p>Designed & developed by Arafat.</p></div></footer>}

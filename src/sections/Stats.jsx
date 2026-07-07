@@ -1,0 +1,7 @@
+import { motion } from "framer-motion"
+const stats=[
+ {number:'10+',title:'Years in the field',text:'A professional journey from field engineering to tender-sales leadership.'},
+ {number:'৳5 Cr+',title:'Bid exposure',text:'High-value techno-commercial tender responsibility in the power sector.'},
+ {number:'9',title:'Tenders in one month',text:'e-GP and manual submissions delivered across concurrent deadlines.'},
+]
+export default function Stats(){return <section id="impact" className="py-32 px-6 bg-white/[.015]"><div className="max-w-7xl mx-auto"><div className="grid lg:grid-cols-[.72fr_1.28fr] gap-16"><div><p className="section-kicker">A glimpse of the professional side</p><h2 className="section-title">Enough context. Not the whole CV.</h2><p className="text-gray-400 text-lg leading-relaxed mt-7 max-w-md">My engineering and tender career deserves its own detailed page. Here are only three numbers to establish the scale of that work.</p><a href="/resume" className="inline-flex mt-9 text-cyan-300 font-bold hover:gap-4 gap-2">View full engineering resume <span>→</span></a></div><div className="compact-impact">{stats.map((s,i)=><motion.article key={s.number} initial={{opacity:0,x:30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} transition={{delay:i*.1}} className="compact-impact-card"><span>0{i+1}</span><strong>{s.number}</strong><div><h3>{s.title}</h3><p>{s.text}</p></div></motion.article>)}</div></div></div></section>}
