@@ -86,6 +86,36 @@ const impact = [
   },
 ];
 
+const certifications = [
+  {
+    title: "Bangladesh e-GP Tender Management",
+    type: "Certification",
+    subtitle: "Certified Training Program",
+    year: "2024",
+    institute: "AllTender, Bangladesh",
+    pdf: "/certificates/e-GP Training - Certificate.pdf",
+    icon: <FaTrophy />,
+  },
+  {
+    title: "Electrical Machine Maintenance",
+    type: "Training",
+    subtitle: "Technical Training Program",
+    year: "2016",
+    institute: "BKTTC, Chattogram",
+    pdf: "/certificates/EMM Training - Certificate.pdf",
+    icon: <FaBolt />,
+  },
+  {
+    title: "Electrical Power Internship",
+    type: "Internship",
+    subtitle: "Industrial Training",
+    year: "2015",
+    institute: "S. Alam Cold Rolled Steels Ltd.",
+    pdf: "/certificates/Industrial Training Certificate.pdf",
+    icon: <FaBuilding />,
+  },
+];
+
 function AnimatedNumber({ value }) {
   const ref = useRef(null);
   const [displayValue, setDisplayValue] = useState(value);
@@ -221,9 +251,7 @@ function ExperienceItem({
           <div className="career-progression">
             <span>Assistant Engineer</span>
             <i>→</i>
-            <span>Senior Engineer</span>
-            <i>→</i>
-            <strong>Deputy Manager</strong>
+            <strong>Senior Engineer</strong>
           </div>
         )}
 
@@ -385,9 +413,9 @@ export default function ResumePage() {
               </h1>
 
               <div className="resume-role">
-                <span>Deputy Manager</span>
+                <span>Senior Engineer</span>
                 <i />
-                <span>Tender Sales</span>
+                <span>Tender & Techno-Commercial</span>
               </div>
 
               <p className="resume-intro">
@@ -464,14 +492,14 @@ export default function ResumePage() {
           <div className="profile-layout">
             <div className="profile-main">
               <p className="profile-large">
-                Tender Sales and electrical engineering professional with{" "}
+                Tender & Techno-Commercial and electrical engineering professional with{" "}
                 <strong>10 years of progressive experience</strong> in
                 Bangladesh&apos;s power and infrastructure sector.
               </p>
 
               <p>
                 Currently serving as{" "}
-                <strong>Deputy Manager (Tender Sales)</strong> at Controlware
+                <strong>Senior Engineer (Tender & Techno-Commercial)</strong> at Controlware
                 Engineering Limited. Experienced in Bangladesh e-GP, public and
                 private tendering, techno-commercial bid preparation, technical
                 compliance, OEM and manufacturer coordination, client
@@ -534,14 +562,14 @@ export default function ResumePage() {
           <SectionTitle
             eyebrow="03 — Experience"
             title="Professional Journey"
-            description="Progressive responsibility across engineering projects, tender sales and commercial leadership."
+            description="Progressive responsibility across engineering projects, Tender & Techno-Commercial and commercial leadership."
           />
 
           <div className="experience-wrapper">
             <ExperienceItem
               company="Controlware Engineering Limited"
-              period="DEC 2018 — PRESENT"
-              role="Deputy Manager — Tender Sales"
+              period="DEC 2020 — PRESENT"
+              role="Senior Engineer — Tender & Techno-Commercial"
               progression
               current
               items={controlware}
@@ -549,7 +577,7 @@ export default function ResumePage() {
 
             <ExperienceItem
               company="Bangladesh Engineering & Construction Corporation Ltd."
-              period="JUL 2016 — NOV 2018"
+              period="JUL 2016 — NOV 2020"
               role="Trainee Engineer → Assistant Engineer"
               items={becc}
             />
@@ -666,64 +694,74 @@ export default function ResumePage() {
           </div>
         </section>
 
-        <section className="resume-credentials-section resume-block resume-reveal">
-          <div className="credentials-grid">
-            <div>
-              <SectionTitle eyebrow="06 — Education" title="Education" />
+        <section className="resume-certification-section resume-block resume-reveal">
 
-              <div className="education-item">
-                <span>2016</span>
-                <div>
-                  <h3>Diploma in Electrical Engineering</h3>
-                  <p>Chittagong Polytechnic Institute</p>
-                  <small>CGPA 2.84 / 4.00</small>
-                </div>
-              </div>
+          <SectionTitle
+              eyebrow="06 — PROFESSIONAL CREDENTIALS"
+              title="Training & Certifications"
+              description="Industry training and certifications that strengthen my engineering knowledge and support my tender management experience."
+          />
 
-              <div className="education-item">
-                <span>2011</span>
-                <div>
-                  <h3>Secondary School Certificate</h3>
-                  <p>Railway Public High School</p>
-                  <small>GPA 4.34 / 5.00</small>
-                </div>
-              </div>
-            </div>
+          <div className="certificate-wrapper">
 
-            <div>
-              <SectionTitle
-                eyebrow="07 — Training"
-                title="Training & Certifications"
-              />
+              {certifications.map((item) => (
 
-              <div className="training-list">
-                <div>
-                  <FaTrophy />
-                  <span>e-GP Tender Certification</span>
-                </div>
+                  <article className="certificate-card" key={item.title}>
 
-                <div>
-                  <FaBolt />
-                  <span>
-                    Electrical Machine Maintenance — BKTTC, Chattogram
-                  </span>
-                </div>
+                      <div className="certificate-icon">
+                          {item.icon}
+                      </div>
 
-                <div>
-                  <FaBuilding />
-                  <span>
-                    Electrical Power Internship — S. Alam Cold Rolled Steels
-                    Ltd.
-                  </span>
-                </div>
-              </div>
-            </div>
+                      <div className="certificate-body">
+
+                          <span className="certificate-type">
+                              {item.type}
+                          </span>
+
+                          <h3>{item.title}</h3>
+
+                          <p>{item.subtitle}</p>
+
+                          <div className="certificate-meta">
+
+                              <span>
+                                  📅 {item.year}
+                              </span>
+
+                              <span>
+                                  🏢 {item.institute}
+                              </span>
+
+                          </div>
+
+                      </div>
+
+                      <div className="certificate-action">
+
+                          <a
+                              href={item.pdf}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                          >
+                              View Certificate
+                              <FaArrowUpRightFromSquare />
+                          </a>
+
+                          <small>{item.year}</small>
+
+                      </div>
+
+                  </article>
+
+              ))}
+
           </div>
-        </section>
+
+      </section>
 
         <section className="resume-reference-section resume-block resume-reveal">
           <SectionTitle
-            eyebrow="08 — References"
+            eyebrow="07 — References"
             title="Professional References"
           />
 
@@ -749,7 +787,7 @@ export default function ResumePage() {
               <span className="reference-number">02</span>
               <h3>Engr. Shamim Hossain</h3>
               <p>
-                Executive Engineer, Tender Sales
+                Executive Engineer, Tender & Techno-Commercial
                 <br />
                 Controlware Engineering Limited
                 <br />

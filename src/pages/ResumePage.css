@@ -843,71 +843,6 @@
   font-size: 15px;
 }
 
-.resume-credentials-section {
-  background: #07111b;
-}
-
-.credentials-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-}
-
-.education-item {
-  display: grid;
-  grid-template-columns: 65px 1fr;
-  gap: 25px;
-  padding: 25px 0;
-  border-bottom: 1px solid var(--resume-border);
-}
-
-.education-item > span {
-  color: var(--resume-cyan);
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.education-item h3 {
-  margin: 0 0 7px;
-  color: white;
-  font-size: 18px;
-}
-
-.education-item p {
-  margin: 0 0 7px;
-  color: #8196a6;
-  font-size: 13px;
-}
-
-.education-item small {
-  color: #5d7485;
-  font-size: 11px;
-}
-
-.training-list {
-  display: grid;
-  gap: 12px;
-}
-
-.training-list > div {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  align-items: center;
-  gap: 16px;
-  padding: 17px;
-  border: 1px solid var(--resume-border);
-}
-
-.training-list svg {
-  color: var(--resume-cyan);
-}
-
-.training-list span {
-  color: #96a8b5;
-  font-size: 13px;
-  line-height: 1.5;
-}
-
 .reference-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -982,6 +917,128 @@
   font-size: 14px;
   font-weight: 800;
   text-decoration: none;
+}
+
+/*==========================================
+PROFESSIONAL CERTIFICATIONS
+==========================================*/
+
+.resume-certification-section{
+    background:#07111b;
+}
+
+.certificate-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.certificate-card{
+    display:grid;
+    grid-template-columns:80px minmax(0,1fr) 210px;
+    gap:28px;
+    align-items:center;
+    padding:28px 30px;
+    border:1px solid var(--resume-border);
+    background:rgba(255,255,255,.02);
+    transition:.35s ease;
+}
+
+.certificate-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(81,228,223,.28);
+    background:rgba(81,228,223,.03);
+}
+
+.certificate-icon{
+    width:64px;
+    height:64px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:var(--resume-cyan);
+    background:rgba(81,228,223,.08);
+    border-radius:16px;
+    transition:.35s;
+}
+
+.certificate-card:hover .certificate-icon{
+    transform:rotate(-6deg) scale(1.08);
+}
+
+.certificate-type{
+    display:inline-block;
+    margin-bottom:12px;
+    padding:6px 12px;
+    border-radius:30px;
+    background:rgba(81,228,223,.08);
+    color:var(--resume-cyan);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.certificate-body h3{
+    margin:0 0 8px;
+    color:#fff;
+    font-size:24px;
+}
+
+.certificate-body p{
+    margin:0 0 16px;
+    color:#8ea3b3;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.certificate-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    color:#7f96a8;
+    font-size:13px;
+}
+
+.certificate-meta span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.certificate-action{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    border-left:1px solid var(--resume-border);
+    padding-left:24px;
+}
+
+.certificate-action a{
+    width:180px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    border:1px solid var(--resume-cyan);
+    color:#fff;
+    font-size:13px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.certificate-action a:hover{
+    background:var(--resume-cyan);
+    color:#04171c;
+}
+
+.certificate-action small{
+    color:#748998;
+    font-size:11px;
 }
 
 @media (max-width: 1050px) {
@@ -1154,6 +1211,22 @@
 
   .experience-heading h3 {
     font-size: 20px;
+  }
+
+  .certificate-card{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+  }
+
+  .certificate-action{
+      width:100%;
+      border:none;
+      padding:0;
+  }
+
+  .certificate-action a{
+      width:100%;
   }
 }
 

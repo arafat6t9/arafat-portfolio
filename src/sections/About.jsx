@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { FaBolt,FaCode,FaCamera } from "react-icons/fa6"
 const worlds=[
- {n:'01',icon:FaBolt,title:'Power & Tender',lead:'My profession.',text:'Electrical engineering, power-sector projects and tender leadership. I currently serve as Deputy Manager — Tender Sales.',link:'/resume',cta:'View engineering resume'},
+ {n:'01',icon:FaBolt,title:'Power & Tender',lead:'My profession.',text:'Electrical engineering, power-sector projects and tender leadership. I currently serve as Senior Engineer — Tender & Techno-Commercial.',link:'/resume',cta:'View engineering resume'},
  {n:'02',icon:FaCode,title:'Systems & Products',lead:'My curiosity.',text:'I turn repetitive workflows and ideas into practical tools using Excel/VBA, Laravel, React, Next.js and automation.',link:'#projects',cta:'Explore what I build'},
  {n:'03',icon:FaCamera,title:'Visual Stories',lead:'My instinct.',text:'Photography came before engineering. Years of wedding, fashion and creative work still shape how I observe, compose and communicate.',link:'#photography',cta:'Enter the gallery'},
 ]

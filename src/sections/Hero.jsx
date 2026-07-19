@@ -20,7 +20,7 @@ export default function Hero(){
    </div>
    <motion.div style={{x:px,y:py}} initial={{opacity:0,scale:.92}} animate={{opacity:1,scale:1}} transition={{delay:.25,duration:.9}} className="relative hidden lg:block hero-portrait-wrap">
     <div className="portrait-grid-label">01 / MULTIDISCIPLINARY</div><div className="hero-photo-frame"><img src={hero} alt="Arafat Chowdhury"/></div>
-    <div className="hero-role-card"><span>Current profession</span><strong>Deputy Manager</strong><p>Tender Sales · Power Sector</p><a href="/resume">Full career details →</a></div>
+    <div className="hero-role-card"><span>Current profession</span><strong>Senior Engineer</strong><p>Tender & Techno-Commercial · Power Sector</p><a href="/resume">Full career details →</a></div>
    </motion.div>
   </div>
   <div className="hero-discipline-line"><span>ENGINEERING PRECISION</span><span>DIGITAL CURIOSITY</span><span>VISUAL INSTINCT</span></div>
