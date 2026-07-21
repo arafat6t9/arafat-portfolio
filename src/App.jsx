@@ -13,12 +13,14 @@ import Projects from "./sections/Projects"
 import Photography from "./sections/Photography"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 function App(){
   if(window.location.pathname==="/resume") return <ResumePage/>
   if(window.location.pathname==="/creative-resume") return <CreativeResumePage/>
   const [loading,setLoading]=useState(true)
   useEffect(()=>{const t=setTimeout(()=>setLoading(false),900);return()=>clearTimeout(t)},[])
+  return <>{loading&&<Loader/>}<ScrollProgress/><CursorGlow/><Navbar/><Hero/><About/><Stats/><Projects/><Photography/><Contact/><Footer/><SpeedInsights /></>
   return <>{loading&&<Loader/>}<ScrollProgress/><CursorGlow/><Navbar/><Hero/><About/><Stats/><Projects/><Photography/><Contact/><Footer/><Analytics/></>
 }
 export default App
