@@ -20,7 +20,23 @@ function App(){
   if(window.location.pathname==="/creative-resume") return <CreativeResumePage/>
   const [loading,setLoading]=useState(true)
   useEffect(()=>{const t=setTimeout(()=>setLoading(false),900);return()=>clearTimeout(t)},[])
-  return <>{loading&&<Loader/>}<ScrollProgress/><CursorGlow/><Navbar/><Hero/><About/><Stats/><Projects/><Photography/><Contact/><Footer/><SpeedInsights /></>
-  return <>{loading&&<Loader/>}<ScrollProgress/><CursorGlow/><Navbar/><Hero/><About/><Stats/><Projects/><Photography/><Contact/><Footer/><Analytics/></>
+  
+  return (
+    <>
+      {loading && <Loader />}
+      <ScrollProgress />
+      <CursorGlow />
+      <Navbar />
+      <Hero />
+      <About />
+      <Stats />
+      <Projects />
+      <Photography />
+      <Contact />
+      <Footer />
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
 }
 export default App
